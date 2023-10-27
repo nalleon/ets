@@ -40,7 +40,12 @@ Default locale: es_ES, platform encoding: UTF-8
 OS name: "linux", version: "5.15.0-76-generic", arch: "amd64", family: "unix"
 ```
 ##  Instalar una versión concreta de Apache Maven
+- Operaciones a realizar:
+```
 
+```
+
+- Salida:
 ```
 nalleon@nalleon-VirtualBox:~$ wget https://www.apache.org/dist/maven/maven-3/3.8.6/binaries/apache-maven-3.8.6-bin.tar.gz -P /tmp
 --2023-10-27 18:47:14--  https://www.apache.org/dist/maven/maven-3/3.8.6/binaries/apache-maven-3.8.6-bin.tar.gz
@@ -74,7 +79,12 @@ nalleon@nalleon-VirtualBox:~$  source /etc/profile.d/maven.sh
 ```
 
 ## Verificar instalación
+- Operaciones a realizar:
+```
 
+```
+
+- Salida:
 ```
 nalleon@nalleon-VirtualBox:~$ mvn -version
 Apache Maven 3.6.3
