@@ -5,7 +5,10 @@ Nabil León Álvarez - 1º DAM (2023/2024) |
 [Vista desde el repositorio](https://github.com/nalleon/ets/tree/main/Unidad-1)
 
 ## Índice
-- 
+- [Introducción](#introducción)
+- [Instalar Apache Maven](#instalar-apache-maven)
+- [Instalar una versión concreta de Apache Maven](#instalar-una-versión-concreta-de-apache-maven)
+- [Verificar instalación](#verificar-instalación)
 
 ## Introducción
 Apache Maven es una herramienta de gestión y comprensión de proyectos de código abierto que se utiliza principalmente para proyectos Java. Maven usa un modelo de objetos de proyecto (POM), que es esencialmente un archivo XML que contiene información del proyecto, detalles de configuración, dependencias del proyecto y más.
@@ -42,7 +45,14 @@ OS name: "linux", version: "5.15.0-76-generic", arch: "amd64", family: "unix"
 ##  Instalar una versión concreta de Apache Maven
 - Operaciones a realizar:
 ```
-
+wget https://www.apache.org/dist/maven/maven-3/3.8.6/binaries/apache-maven-3.8.6-bin.tar.gz -P /tmp
+sudo tar xf /tmp/apache-maven-*.tar.gz -C /opt
+sudo ln -s /opt/apache-maven-3.8.6 /opt/maven
+sudo nano /etc/profile.d/maven.sh
+    export M2_HOME=/opt/maven
+    export MAVEN_HOME=/opt/maven
+    export PATH=${M2_HOME}/bin:${PATH}
+ sudo chmod +x /etc/profile.d/maven.sh
 ```
 
 - Salida:
@@ -81,7 +91,7 @@ nalleon@nalleon-VirtualBox:~$  source /etc/profile.d/maven.sh
 ## Verificar instalación
 - Operaciones a realizar:
 ```
-
+mvn -version
 ```
 
 - Salida:
