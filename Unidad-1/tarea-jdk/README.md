@@ -2,7 +2,7 @@
 
 # Instalación de JDK en el Ubuntu
 Nabil León Álvarez - 1º DAM (2023/2024) | 
-[Vista desde el repositorio](https://github.com/nalleon/ets/tree/main/Unidad-1)
+[Vista desde el repositorio](https://github.com/nalleon/ets/tree/main/Unidad-1/tarea-jdk)
 
 ## Índice
 - [Introducción](#introducción)
@@ -17,7 +17,7 @@ Java sin dudas es un lenguaje de programación que es utilizado para diversos pr
 Es por ello que en esta ocasión compartiré con ustedes un sencillo tutorial de como instalar Java en nuestro sistema con el JDK el cual es un entorno de desarrollo y el entorno de ejecución JRE.
 
 ## Realizar la instalación de Java en el SO 
-
+Para comenzar actualizaremos el sistema. Seguidamente instalaremos java y haremos una combrabación de este.
 - Operaciones a realizar:
 ```
   sudo apt-get update
@@ -65,8 +65,9 @@ OpenJDK 64-Bit Server VM (build 11.0.20.1+1-post-Ubuntu-0ubuntu122.04, mixed mod
 ```
 
 ## Instalar una versión específica de Java
+Continuaremos instalando las versiones 11, 13 y 8 de Java además de comprobandolas.
 
-Operaciones a realizar:
+- Operaciones a realizar:
 ```
 sudo apt install openjdk-11-jdk
 sudo apt install openjdk-13-jdk
@@ -74,7 +75,7 @@ sudo apt install openjdk-8-jdk
   java --version
 ```
 
-Salida:
+- Salida:
 ```
 nalleon@nalleon-VirtualBox:~$ sudo apt install openjdk-11-jdk
 Leyendo lista de paquetes... Hecho
@@ -103,7 +104,9 @@ nalleon@nalleon-VirtualBox:~$
 ```
 La version 13 jdk no exite.
 ```
+
 ## Listar la versiones de OpenJDK instaladas 
+Al java 8 no ejecutarse directamente, debemos de confugurar las variables de entorno. Para ello comenzaremos verificando la descarga de las versiones del jdk.
 
 - Operaciones a realizar:
 ```
@@ -117,7 +120,7 @@ default-java               java-11-openjdk-amd64     java-8-openjdk-amd64
 java-1.11.0-openjdk-amd64  java-1.8.0-openjdk-amd64  openjdk-11
 ```
 ## Actualización de las variables de entorno
-
+Seguidamente editaremos el fichero profile con el siguiente comando:
 - Operaciones a realizar:
 ```
 sudo update-alternatives --config java
@@ -146,7 +149,8 @@ Existen 2 opciones para la alternativa java (que provee /usr/bin/java).
 Pulse <Intro> para mantener el valor por omisión [*] o pulse un número de selección: 2
 update-alternatives: utilizando /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java para proveer /usr/bin/java (java) en modo manual
 ```
-Existe una alternativa.
+
+De forma alternativa, podemos utilizar el editor de texto nano en /etc/profile.d/java.sh y añadimos el siguiente código dentro:
 
 - Operaciones a realizar:
 ```
@@ -157,9 +161,10 @@ PATH=$PATH:$HOME/bin:$JAVA_HOME/bin
 export JAVA_HOME
 export JRE_HOME
 export PATH
-
+```
+Además, harenos que el script sea ejecutable y cargaremos las variables de entorno.
+```
 sudo chmod +x /etc/profile.d/java.sh
-
 source /etc/profile.d/java.sh
 ```
 
