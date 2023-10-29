@@ -2,7 +2,7 @@
 
 # Instalación de MAVEN en el Ubuntu
 Nabil León Álvarez - 1º DAM (2023/2024) | 
-[Vista desde el repositorio](https://github.com/nalleon/ets/tree/main/Unidad-1)
+[Vista desde el repositorio](https://github.com/nalleon/ets/tree/main/Unidad-1/tarea-maven)
 
 ## Índice
 - [Introducción](#introducción)
@@ -14,6 +14,9 @@ Nabil León Álvarez - 1º DAM (2023/2024) |
 Apache Maven es una herramienta de gestión y comprensión de proyectos de código abierto que se utiliza principalmente para proyectos Java. Maven usa un modelo de objetos de proyecto (POM), que es esencialmente un archivo XML que contiene información del proyecto, detalles de configuración, dependencias del proyecto y más.
 
 ## Instalar Apache Maven
+La instalación de Maven en Ubunto utilizando apt es un proceso simple y directo.
+
+En primer lugar debemos de actualizar el índice del paquete. Seguidamente instalamos Maven y comprobamos su instalacion. Para ello utilizaremos los siguientes comandos: 
 
 - Operaciones a realizar:
 ```
@@ -21,6 +24,8 @@ Apache Maven es una herramienta de gestión y comprensión de proyectos de códi
   sudo apt install maven
   mvn -version
 ```
+
+
 - Salida:
 ```
 nalleon@nalleon-VirtualBox:~$ sudo apt update
@@ -42,25 +47,45 @@ Java version: 1.8.0_382, vendor: Private Build, runtime: /usr/lib/jvm/java-8-ope
 Default locale: es_ES, platform encoding: UTF-8
 OS name: "linux", version: "5.15.0-76-generic", arch: "amd64", family: "unix"
 ```
+
 ##  Instalar una versión concreta de Apache Maven
+
+Nuestro primer paso sera descargar la ultima versión de Apache Maven desde la página oficial. Esta sera descargada en el directorio /tmp:
+
 - Operaciones a realizar:
 ```
-wget https://www.apache.org/dist/maven/maven-3/3.8.6/binaries/apache-maven-3.8.6-bin.tar.gz -P /tmp
+wget https://www.apache.org/dist/maven/maven-3/3.8.6/binaries/apache-maven-3.8.8-bin.tar.gz -P /tmp
+```
+
+Una vez que la descarga haya finalizado, descomdescomprimiremos el archivo en la carpeta /opt.
+```
 sudo tar xf /tmp/apache-maven-*.tar.gz -C /opt
+```
+De cara a obtener un mayor control sobre las versiones y actualizaciones de Maven crearemos un enlace simbolico que apunte al directorio de instalación de Maven:
+
+```
 sudo ln -s /opt/apache-maven-3.8.6 /opt/maven
+```
+Estableceremos variables de entorno. Para ello abriremos el editor de texto y crearemos un nuevo archivo con el nomnre de mavenenv.sh en el directorio /etc/profile.d/
+```
 sudo nano /etc/profile.d/maven.sh
     export M2_HOME=/opt/maven
     export MAVEN_HOME=/opt/maven
     export PATH=${M2_HOME}/bin:${PATH}
+```
+Guardamos antes de cerrar el archivo el archivo. Este script se utilizará al iniciar el shell.
+
+A continuación, haremos que el script sea ejecutable utilizando el comando chmod. 
+```
  sudo chmod +x /etc/profile.d/maven.sh
+```
+Finalmente, cargaremos las variables de entorno haciendo uso del comando de source.
+```
+ source /etc/profile.d/maven.sh
 ```
 
 - Salida:
 ```
-nalleon@nalleon-VirtualBox:~$ wget https://www.apache.org/dist/maven/maven-3/3.8.6/binaries/apache-maven-3.8.6-bin.tar.gz -P /tmp
---2023-10-27 18:47:14--  https://www.apache.org/dist/maven/maven-3/3.8.6/binaries/apache-maven-3.8.6-bin.tar.gz
-Resolviendo www.apache.org (www.apache.org)... falló: Nombre o servicio desconocido.
-wget: no se pudo resolver la dirección del equipo ‘www.apache.org’
 nalleon@nalleon-VirtualBox:~$ wget https://www.apache.org/dist/maven/maven-3/3.8.8/binaries/apache-maven-3.8.8-bin.tar.gz -P /tmp
 --2023-10-27 18:52:40--  https://www.apache.org/dist/maven/maven-3/3.8.8/binaries/apache-maven-3.8.8-bin.tar.gz
 Resolviendo www.apache.org (www.apache.org)... 151.101.2.132, 2a04:4e42::644
@@ -89,6 +114,8 @@ nalleon@nalleon-VirtualBox:~$  source /etc/profile.d/maven.sh
 ```
 
 ## Verificar instalación
+Para comprobar que Maven se ha instalado de manera correcta usaremos el siguiente comando que imprimira la versión de Maven:
+
 - Operaciones a realizar:
 ```
 mvn -version
