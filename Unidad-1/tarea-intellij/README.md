@@ -1,8 +1,8 @@
-<div align="justify">
+﻿<div align="justify">
 
 # Instalación del IDE IntelliJ IDEA
 Nabil León Álvarez - 1º DAM (2023/2024) | 
-[Vista desde el repositorio](https://github.com/nalleon/ets/tree/main/Unidad-1)
+[Vista desde el repositorio](https://github.com/nalleon/ets/tree/main/Unidad-1/tarea-intellij)
 
 ## Índice
 - [Primeros pasos](#primeros-pasos)
