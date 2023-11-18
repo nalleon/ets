@@ -32,12 +32,15 @@ Como podemos observar, el sistema tiene distintos actores, casos de uso y relaci
 
 
 ## **Actores**
+
+<img src=images/actorescasodeuso1.png>
+
 |  Actor | Paciente |
 |---|---|
 | Descripción  | _Un individuo que busca servicios médicos en el hospital._  |
 | Características  |  |
 | Relaciones | _Registra información médica, registra información personal, programa citas._  |
-| Referencias | _C.U.1, C.U.13, C.U.2_ |   
+| Referencias | _C.U.1, C.U.2, C.U.3_ |   
 |  Notas |  |
 | Autor  | _Nabil León (@nalleon)_ |
 |Fecha | _15/11/2023_ |
@@ -52,7 +55,7 @@ Como podemos observar, el sistema tiene distintos actores, casos de uso y relaci
 | Descripción  | _Profesional médico encargado de diagnosticar y tratar a los pacientes._  |
 | Características  |  |
 | Relaciones | _Asigna tareas, realiza diagnósticos, prescribe tratamientos, actualiza información, accede información._  |
-| Referencias | _C.U.7, C.U.3, C.U.4, C.U.6, C.U.5_ |   
+| Referencias | _C.U.4, C.U.5, C.U.6, C.U.7, C.U.8_ |   
 |  Notas |  |
 | Autor  | _Nabil León (@nalleon)_ |
 |Fecha | _15/11/2023_ |
@@ -66,8 +69,8 @@ Como podemos observar, el sistema tiene distintos actores, casos de uso y relaci
 |---|---|
 | Descripción  | _Encargado de asistir a los médicos y cuidar a los pacientes._  |
 | Características  |  |
-| Relaciones | _Actualiza información, accede información._  |
-| Referencias | _C.U.10, C.U.11, C.U.12_ |   
+| Relaciones | _Accede historial médico, actualiza historial médico._  |
+| Referencias | _C.U.6, C.U:7 |   
 |  Notas |  |
 | Autor  | _Nabil León (@nalleon)_ |
 |Fecha | _15/11/2023_ |
@@ -82,7 +85,7 @@ Como podemos observar, el sistema tiene distintos actores, casos de uso y relaci
 | Descripción  | _Responsable de la configuración y administración del sistema._  |
 | Características  |  |
 | Relaciones | _Gestiona recursos hospitalarios, configuraciones del sistema, actualizaciones del sistema._  |
-| Referencias | _C.U.10, C.U.11, C.U.12_ |   
+| Referencias | _C.U.11, C.U.12, C.U.13_ |   
 |  Notas |  |
 | Autor  | _Nabil León (@nalleon)_ |
 |Fecha | _15/11/2023_ |
@@ -96,8 +99,8 @@ Como podemos observar, el sistema tiene distintos actores, casos de uso y relaci
 |---|---|
 | Descripción  | _Encargado de la recepción de pacientes y asignación de citas._  |
 | Características  |  |
-| Relaciones | _Programa citas, realiza facturación, procesamiento seguro médico._  |
-| Referencias | _C.U.2,, C.U.8,  C.U.9_ |   
+| Relaciones | _Programa citas, realiza facturación del seguro médico, procesamiento del seguro médico._  |
+| Referencias | _C.U.2, C.U.9, C.U.10_ |   
 |  Notas |  |
 | Autor  | _Nabil León (@nalleon)_ |
 |Fecha | _15/11/2023_ |
@@ -108,6 +111,9 @@ Como podemos observar, el sistema tiene distintos actores, casos de uso y relaci
 | | |
 
 ## **Casos de uso**
+
+<img src=images/casosdeuso.png>
+
   |  Caso de Uso	CU | C.U.1: Registra información medica  |
   |---|---|
   | Fuentes  | _"El paciente se registra en el sistema proporcionando información personal y médica."_  |
@@ -280,5 +286,7 @@ Como podemos observar, el sistema tiene distintos actores, casos de uso y relaci
 |Fecha | _15/11/2023_ |
 
   ## **Diagrama**
+
+<img src=images/casosdeusodiagrama.png>
 
 </div>
