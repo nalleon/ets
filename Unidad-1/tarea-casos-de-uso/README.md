@@ -114,12 +114,12 @@ Como podemos observar, el sistema tiene distintos actores, casos de uso y relaci
 
 <img src=images/casosdeuso.png>
 
-  |  Caso de Uso	CU | C.U.1: Registra información medica  |
+  |  Caso de Uso	CU | C.U.1: Registra información  |
   |---|---|
   | Fuentes  | _"El paciente se registra en el sistema proporcionando información personal y médica."_  |
   | Actor  |  _Paciente_ |
   | Descripción | _Se registran los datos médicos del paciente._  |
-  | Flujo básico | 1. _El paciente registra sus datos médicos para solicitar servicios hospitalarios_ |
+  | Flujo básico | 1. _El paciente registra sus datos médicos y personales para solicitar servicios hospitalarios_ |
   | Pre-condiciones |   |  
   | Post-condiciones  |   |  
   |  Requerimientos |  |
@@ -127,20 +127,7 @@ Como podemos observar, el sistema tiene distintos actores, casos de uso y relaci
 | Autor  | _Nabil León (@nalleon)_ |
 |Fecha | _15/11/2023_ |
 
-  |  Caso de Uso	CU | C.U.2: Registra información personal  |
-  |---|---|
-  | Fuentes  | _"El paciente se registra en el sistema proporcionando información personal y médica."_  |
-  | Actor  |  _Paciente_ |
-  | Descripción | _Se registran los datos personales del paciente._  |
-  | Flujo básico | 1. _El paciente registra sus datos personales para solicitar servicios hospitalarios_ |
-  | Pre-condiciones |   |  
-  | Post-condiciones  |   |  
-  |  Requerimientos |  |
-  |  Notas |   |
-| Autor  | _Nabil León (@nalleon)_ |
-|Fecha | _15/11/2023_ |
-
-  |  Caso de Uso	CU | C.U.3: Programa citas  |
+  |  Caso de Uso	CU | C.U.2: Programa citas  |
   |---|---|
   | Fuentes  | _"El paciente o la recepcionista programa citas médicas para los pacientes."_  |
   | Actor  |  _Paciente, Recepcionista_ |
@@ -148,139 +135,152 @@ Como podemos observar, el sistema tiene distintos actores, casos de uso y relaci
   | Flujo básico | 1. _La recepcionista se autentica en el sistema._ 2. _Se programa la cita._ |
   | Pre-condiciones | _Autenticación de la recepcionista_  |  
   | Post-condiciones  |   |  
-  |  Requerimientos | _Autenticación de la recepcionista. Ej: DNI_  |
+  |  Requerimientos | _C.U.13: Autenticar._  |
   |  Notas |   |
 | Autor  | _Nabil León (@nalleon)_ |
 |Fecha | _15/11/2023_ |
 
 
-  |  Caso de Uso	CU | C.U.4:  Realiza diagnosticos  |
+  |  Caso de Uso	CU | C.U.3:  Realiza diagnosticos  |
   |---|---|
   | Fuentes  | _"El médico realiza diagnósticos, prescribe tratamientos y registra la información médica del paciente."_  |
   | Actor  |  _Médico_ |
   | Descripción | _Se realizan diagnósticos del paciente._  |
   | Flujo básico | 1. _El médico se autentica en el sistema._ 2. _Se realiza el diagnóstico del paciente._|
-  | Pre-condiciones | _Autenticación del médico._  |  
+  | Pre-condiciones |   |  
   | Post-condiciones  |   |  
-  |  Requerimientos | _Autenticación de médico. Ej: DNI_  |
+  |  Requerimientos | _C.U.13: Autenticar._  |
   |  Notas |   |
 | Autor  | _Nabil León (@nalleon)_ |
 |Fecha | _15/11/2023_ |
 
 
-  |  Caso de Uso	CU | C.U.5:  Prescribe tratamientos  |
+  |  Caso de Uso	CU | C.U.4:  Prescribe tratamientos  |
   |---|---|
   | Fuentes  | _"El médico realiza diagnósticos, prescribe tratamientos y registra la información médica del paciente."_  |
   | Actor  |  _Médico_ |
   | Descripción | _Se receta un tratamiento para el paciente._  |
   | Flujo básico | 1. _Se prescribe el tratamiento de un paciente._ |
- | Pre-condiciones | _Autenticación del médico._  |  
+ | Pre-condiciones |   |  
   | Post-condiciones  |   |  
-  |  Requerimientos | _Autenticación de médico. Ej: DNI._  |
+  |  Requerimientos | _C.U.13: Autenticar._  |
   |  Notas |   |
 | Autor  | _Nabil León (@nalleon)_ |
 |Fecha | _15/11/2023_ |
 
-  |  Caso de Uso	CU | C.U.6: Accede  historial médico  |
+  |  Caso de Uso	CU | C.U.5: Accede  historial médico  |
   |---|---|
   | Fuentes  | _"El médico y el enfermero pueden acceder y actualizar el historial médico del paciente."_  |
   | Actor  |  _Médico, Enfermero_ |
   | Descripción | _Se accede al historial médico del paciente._  |
   | Flujo básico | 1. _Acceso al historial médico de un paciente._ |
-  | Pre-condiciones | _Autenticación del médico._  |  
+  | Pre-condiciones | |  
   | Post-condiciones  |   |  
-  |  Requerimientos | _Autenticación de médico. Ej: DNI._  |
+  |  Requerimientos | _C.U.13: Autenticar._  |
   |  Notas |   |
   | Autor  | _Nabil León (@nalleon)_ |
   |Fecha | _15/11/2023_ |
 
-  |  Caso de Uso	CU | C.U.7: Actualiza historial médico  |
+  |  Caso de Uso	CU | C.U.6: Actualiza historial médico  |
   |---|---|
   | Fuentes  | _"El médico y el enfermero pueden acceder y actualizar el historial médico del paciente."_  |
   | Actor  | _Médico, Enfermero_ |
   | Descripción | _Se actualizan los datos médicos del paciente._  |
   | Flujo básico | 1. _El médico o el enfermero actualiza el historial de un paciente._ |
-  | Pre-condiciones | _Autenticación del médico o del enfermero._  |  
+  | Pre-condiciones |  |  
   | Post-condiciones  |   |  
-  |  Requerimientos | _Autenticación del médico o del enfermero. Ej: DNI._  |
+  |  Requerimientos | _C.U.13: Autenticar._  |
   |  Notas |   |
   | Autor  | _Nabil León (@nalleon)_ |
   |Fecha | _15/11/2023_ |
 
-  |  Caso de Uso	CU | C.U.8: Asigna tareas especificas  |
+  |  Caso de Uso	CU | C.U.7: Asigna tareas especificas  |
   |---|---|
   | Fuentes  | _"El médico asigna tareas específicas a los enfermeros relacionadas con la atención del paciente."_  |
   | Actor  |  _Médico_ |
   | Descripción | _Se asigna una tarea a un enfermero._  |
   | Flujo básico | 1. _El médico ordena a un enfermero realizar una tarea._ |
-  | Pre-condiciones |_Autenticación del médico._  |  
+  | Pre-condiciones ||  
   | Post-condiciones  |   |  
-  |  Requerimientos | _Autenticación del médico. Ej: DNI._  |
+  |  Requerimientos | _C.U.13: Autenticar._  |
   |  Notas |   |
 | Autor  | _Nabil León (@nalleon)_ |
 |Fecha | _15/11/2023_ |
 
-  |  Caso de Uso	CU | C.U.9: Realiza facturación  |
+  |  Caso de Uso	CU | C.U.8: Realiza facturación  |
   |---|---|
   | Fuentes  | _"El personal administrativo realiza tareas relacionadas con la facturación y el procesamiento del seguro médico."_  |
   | Actor  |  _Recepcionista_ |
   | Descripción | _La recepcionista factura el seguro médico de un paciente._  |
   | Flujo básico | 1. _Se realiza la facturación del seguro médico._ |
-  | Pre-condiciones | _Autenticación de la recepcionista._  |  
+  | Pre-condiciones |  |  
   | Post-condiciones  |   |  
-  |  Requerimientos | _Autenticación de recepcionista. Ej: DNI_  |
+  |  Requerimientos | _C.U.13: Autenticar._  |
   |  Notas |   |
 | Autor  | _Nabil León (@nalleon)_ |
 |Fecha | _15/11/2023_ |
 
-  |  Caso de Uso CU | C.U.10:  Procesamiento seguro médico   |
+  |  Caso de Uso CU | C.U.9:  Procesamiento seguro médico   |
   |---|---|
   | Fuentes  | _"El personal administrativo realiza tareas relacionadas con la facturación y el procesamiento del seguro médico."_  |
   | Actor  |  _Recepcionista_ |
   | Descripción | _La recepcionista realiza el procesamiento del seguro médico del paciente._  |
   | Flujo básico | 1. _Se procesa el seguro médico del paciente._ |
-  | Pre-condiciones | _Autenticación de la recepcionista._  |  
+  | Pre-condiciones |   |  
   | Post-condiciones  |   |  
-  |  Requerimientos | _Autenticación de la recepcionista. Ej: DNI_  |
+  |  Requerimientos | _C.U.13: Autenticar._  |
   |  Notas |   |
 | Autor  | _Nabil León (@nalleon)_ |
 |Fecha | _15/11/2023_ |
 
-  |  Caso de Uso CU | C.U.11: Gestiona recursos hospitalarios   |
+  |  Caso de Uso CU | C.U.10: Gestiona recursos hospitalarios   |
   |---|---|
   | Fuentes  | _"El administrador del sistema gestiona los recursos hospitalarios, como camas, equipos médicos y suministros."_  |
   | Actor  |  _Administrador del Sistema_ |
   | Descripción | _Se realiza la gestión de los recursos del hospital._  |
   | Flujo básico | 1. _Se gestionan los recurso hospitalarios (camas, equipos médicos y suministros.)_ |
-  | Pre-condiciones | _Autenticación del administrador del sistema._  |  
+  | Pre-condiciones | |  
   | Post-condiciones  |   |  
-  |  Requerimientos | _Autenticación del administrador del sistema. Ej: DNI_  |
+  |  Requerimientos | _C.U.13: Autenticar._  |
   |  Notas |   |
 | Autor  | _Nabil León (@nalleon)_ |
 |Fecha | _15/11/2023_ |
 
-  |  Caso de Uso	CU | C.U.12: Configuraciones del sistema   |
+  |  Caso de Uso	CU | C.U.11: Configuraciones del sistema   |
   |---|---|
   | Fuentes  | _"El administrador del sistema realiza configuraciones y actualizaciones del sistema."_  |
   | Actor  |  _Administrador del Sistema_ |
  | Descripción | _Se realiza la configuración del sistema del hospital._  |
   | Flujo básico | 1. _El administrador configura el sistema del hospital._ |
- | Pre-condiciones | _Autenticación del administrador del sistema._  |  
+ | Pre-condiciones |  |  
   | Post-condiciones  |   |  
-  |  Requerimientos | _Autenticación del administrador del sistema. Ej: DNI_  |
+  |  Requerimientos | _C.U.13: Autenticar._  |
   |  Notas |   |
 | Autor  | _Nabil León (@nalleon)_ |
 |Fecha | _15/11/2023_ |
 
-  |  Caso de Uso	CU | C.U.13: Actualizaciones del sistema   |
+  |  Caso de Uso	CU | C.U.12: Actualizaciones del sistema   |
   |---|---|
   | Fuentes  | _"El administrador del sistema realiza configuraciones y actualizaciones del sistema."_  |
   | Actor  |  _Administrador del Sistema_ |
   | Descripción | _Se realiza la actualización del sistema del hospital._ |
   | Flujo básico |  1. _El administrador actualiza el sistema del hospital._ |
-  | Pre-condiciones | _Autenticación del administrador del sistema._  |  
+  | Pre-condiciones |  |  
   | Post-condiciones  |   |  
-  |  Requerimientos | _Autenticación del administrador del sistema. Ej: DNI_  |
+  |  Requerimientos | _C.U.13: Autenticar._  ||
+  |  Notas |   |
+| Autor  | _Nabil León (@nalleon)_ |
+|Fecha | _15/11/2023_ |
+
+  |  Caso de Uso	CU | C.U.13: Autenticar   |
+  |---|---|
+  | Fuentes  | _"El administrador del sistema realiza configuraciones y actualizaciones del sistema."_  |
+  | Actor  |  _Paciente, Médico, Recepcionista, Enfermero, Administrador del Sistema_ |
+  | Descripción | _Se realiza la autenticación del usuario._ |
+  | Flujo básico |   |
+  | Pre-condiciones |  |  
+  | Post-condiciones  |   |  
+  |  Requerimientos |   ||
   |  Notas |   |
 | Autor  | _Nabil León (@nalleon)_ |
 |Fecha | _15/11/2023_ |
