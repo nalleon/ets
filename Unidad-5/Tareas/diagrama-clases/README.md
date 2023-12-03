@@ -31,7 +31,7 @@ Se pide:
 ## Diagrama de Casos de Uso
 
 ## Actores
-<img src=images/actores.png>
+<img src=images/actores.PNG>
 
 |  Actor | Bibliotecario |
 |---|---|
@@ -64,7 +64,7 @@ Se pide:
 | | |
 ## Casos de Uso
 
-<img src=images/cu.png>
+<img src=images/cu.PNG>
 
  |  Caso de Uso	CU | C.U.1: Gestionar Libros  |
   |---|---|
@@ -144,7 +144,7 @@ Se pide:
 | Autor  | _Nabil León (@nalleon)_ |
 |Fecha | _03/12/2023_ |
 ## Diagrama
-<img src=images/diagrama-cu.png>
+<img src=images/diagrama-cu.PNG>
 
 ## Diagrama de clases
 <img src=images/diagrama-clases.png>
