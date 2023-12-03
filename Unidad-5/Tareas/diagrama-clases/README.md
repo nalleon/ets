@@ -148,3 +148,5 @@ Se pide:
 
 ## Diagrama de clases
 <img src=images/diagrama-clases.png>
+
+</div>
