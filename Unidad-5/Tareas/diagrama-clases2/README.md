@@ -39,7 +39,7 @@ Se pide:
 
 
 ## Diagrama de clases
-<img src=images/.png>
+<img src=images/agencia.png>
 
 ## Ministerio de Defensa
 ```
