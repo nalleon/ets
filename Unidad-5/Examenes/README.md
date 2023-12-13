@@ -15,103 +15,18 @@ Diseñe un diagrama de clases para un sistema de red social. El sistema debe per
 
 - Pseudocódigo:
 
-- Clases: 
-```code
-Class Usuario:
-    private int nombre;
-    private String correoElec;
-    private int cantidadMeGustas;
 
- - Constructores:
-      public Usuario (){}
+ ```
+La clase usuario recopila el nombre, correo electronico para crear el perfil, la cantidad de megustas que ha dado. Un usuario tiene seguidores y si este les sigue tambien son considerados amigos.
 
-    public Usuario(int nombre) {
-        this.nombre = nombre;
-    }
-
-    public Usuario(int nombre, String correoElec) {
-        this.nombre = nombre;
-        this.correoElec = correoElec;
-    }
-
-    public Usuario(int nombre, String correoElec, int cantidadMeGustas) {
-        this.nombre = nombre;
-        this.correoElec = correoElec;
-        this.cantidadMeGustas = cantidadMeGustas;
-    }
+El usuario además crea publicaciones e interactuar con estas (dar me gustas, realizar comentarios), y puede crearse mas de ún perfil.
 
 
- - Gettes/Setters:
-    public int getNombre() {
-        return nombre;
-    }
+La clase comentario debe de contener tanto el contenido de estos tanto como la fecha de su publciación.
 
-    public void setNombre(int nombre) {
-        this.nombre = nombre;
-    }
+La clase perfil contine información extra acerca del usuario, con una biograia, su foto de perfil y si la cantidad de estos.
 
-    public String getCorreoElec() {
-        return correoElec;
-    }
-
-    public void setCorreoElec(String correoElec) {
-        this.correoElec = correoElec;
-    }
-
-    public int getCantidadMeGustas() {
-        return cantidadMeGustas;
-    }
-
-    public void setCantidadMeGustas(int cantidadMeGustas) {
-        this.cantidadMeGustas = cantidadMeGustas;
-    }
-
-public class Perfiles {
-
-    private  String biografia;
-    private String fotoPerfil;
-    private int cantidadPerfiles;
-
-    public Perfiles() {}
-    public Perfiles(String biografia) {
-        this.biografia = biografia;
-    }
-
-    public Perfiles(String biografia, String fotoPerfil) {
-        this.biografia = biografia;
-        this.fotoPerfil = fotoPerfil;
-    }
-
-    public Perfiles(String biografia, String fotoPerfil, int cantidadPerfiles) {
-        this.biografia = biografia;
-        this.fotoPerfil = fotoPerfil;
-        this.cantidadPerfiles = cantidadPerfiles;
-    }
-
-    public String getBiografia() {
-        return biografia;
-    }
-
-    public void setBiografia(String biografia) {
-        this.biografia = biografia;
-    }
-
-    public String getFotoPerfil() {
-        return fotoPerfil;
-    }
-
-    public void setFotoPerfil(String fotoPerfil) {
-        this.fotoPerfil = fotoPerfil;
-    }
-
-    public int getCantidadPerfiles() {
-        return cantidadPerfiles;
-    }
-
-    public void setCantidadPerfiles(int cantidadPerfiles) {
-        this.cantidadPerfiles = cantidadPerfiles;
-    }
-
+La clase publicacion recoge como propiedades el contenido que un usuario suba así como la fecha donde este se subió y la cantidad de estos por usuario.
 
 ```
 
@@ -134,16 +49,17 @@ Diseñe un diagrama de clases para un sistema de reservas de vuelos. El sistema 
 
 - Pseudocódigo:
 ```code
-Usuario:
-private int nombre;
-private String correoElec;
-private int cantidadMeGustas;
-private seguidores;
-private publicaciones;
-private comentarios;
- - Gettes/Setters:
+La clase Usuario tiene como propiedades privadas el nombre de este, su numero de telefono y sus reservas. 
 
-    
+La clase perfil es una asociacion del usuario puesto que este rttiene información relacionada como el tipo de asientpo que este ha seleccionada y su frecuencia de vuelo.
+
+La clase reservas por su parte tiene como propiedades el numero de asientos y el estado de esta, es decir si esta ha sido concedida o no.
+
+Por otro lado, la clase Aeropuerto tiene el nombre de este y su ubicacion así como una lista de los vuelos.
+
+La clase Vuelos tiene tanto el origen como el destino y la fecha de estos. Tambien la lista de la aerolinea de donde pertenecen.
+
+Finalmente la clase aerolínea tiene su nombre.
 ```
 
 
