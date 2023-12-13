@@ -1,6 +1,6 @@
-<div allign="justify">
+<div align="justify">
+**Nabil León Álvarez - 1ºDAM | [Vista desde GitHub](https://github.com/nalleon/ets/tree/main/Unidad-5/Examenes)** 
 
-Nabil León Álvarez 1ºDAM - Vista desde [GitHub](https://github/nalleon/ets/Unidad-5/Examenes)
 ## Red Social
 ```
 Diseñe un diagrama de clases para un sistema de red social. El sistema debe permitir a los usuarios crear perfiles, publicar contenido, seguir a otros usuarios y dar "me gusta" a las publicaciones. Teniendo en cuenta la siguiente información:

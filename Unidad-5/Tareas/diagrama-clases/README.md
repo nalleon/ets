@@ -1,7 +1,7 @@
 
 <div align="justify">
-
 **Nabil León Álvarez - 1ºDAM | [Vista desde GitHub](https://github.com/nalleon/ets/tree/main/Unidad-5/diagrama-clases)** 
+
 
 ## Índice
 - [Descripción del ejercicio](#descripción-del-ejercicio)
