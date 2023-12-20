@@ -19,7 +19,7 @@ Desarrolla un sistema de llamado Gestión de Biblioteca que permita a los biblio
 
 ## **Actores**
 
-<img src=../actores.png>
+<img src=../images/actores.png>
 
 |  Actor | Usuario |
 |---|---|
@@ -56,7 +56,7 @@ Desarrolla un sistema de llamado Gestión de Biblioteca que permita a los biblio
 
 ## **Casos de Uso**
 
-<img src=../cu.png>
+<img src=../images/cu.png>
 
   |  Caso de Uso	CU | C.U.1: Buscar Libro  |
   |---|---|
@@ -245,10 +245,10 @@ Desarrolla un sistema de llamado Gestión de Biblioteca que permita a los biblio
 
 
 ## Diagrama CU Individual
-<img src=../diagramaindividual.png>
+<img src=../images/diagramaindividual.png>
 
 ## Diagrama CU Final
-<img src=../diagramafinal(1).png>
+<img src=../images/diagramafinal(1).png>
 
 
 ## Diagrama de Clases
