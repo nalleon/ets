@@ -1,6 +1,6 @@
 <div align="justify">
 
-**Nabil L. A. - 1ºDAM | [Vista desde GitHub](https://github.com/nalleon/ets/tree/main/Unidad-5/Proyecto/Diagrama%20de%20Casos%20de%20Uso)** 
+**Nabil L. A. - 1ºDAM** 
 
 
 ## Índice
