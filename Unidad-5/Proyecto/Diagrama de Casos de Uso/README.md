@@ -13,9 +13,22 @@
 
 ## Descripción del ejercicio
 ```
-Desarrolla un sistema de llamado Gestión de Biblioteca que permita a los 
-bibliotecarios buscar, prestar y devolver libros en una biblioteca.
-El sistema debe tener una interfaz de usuario simple (Main con menú) y proporcionar funcionalidades básicas de administración de libros, como: (obtenerInformacion (identificadorLibro),prestarLibro(identificadorLibro),devolverLibro(identificadorLibro),agregarComentario(identificadorLibro),consultarComentarios(identificadorLibro),verificarDisponibilidad(identificadorLibro)). Además el sistema permitirá dar de alta/modificación/búsqueda/eliminación de usuarios y libros.
+Desarrolla un sistema de llamado Gestión de Biblioteca que permita a los bibliotecarios buscar, prestar y devolver libros en una biblioteca.
+
+El sistema permitirá además las siguientes acciones:
+    El usuario:
+        - El usuario busca un libro por título, autor o categoría.
+        - El usuario selecciona un libro disponible y lo presta.
+        - El usuario devuelve un libro prestado.
+        - El usuario deja un comentario en un libro.
+        - El usuario selecciona una categoría y ve la lista de libros en esa categoría.
+
+    El bibliotecario:
+        - El bibliotecario registra a un nuevo usuario en el sistema.
+        - El bibliotecario agrega un nuevo libro al sistema.
+        - El bibliotecario realiza un préstamo a un usuario.
+        - El bibliotecario procesa la devolución de un libro.
+        - El bibliotecario gestiona las reservas de libros (visualiza información/modifica).
 ```
 
 ## **Actores**
@@ -29,7 +42,7 @@ El sistema debe tener una interfaz de usuario simple (Main con menú) y proporci
 | Relaciones | _Buscar Libro, Devolver Libro, Seleccionar Libro, Dejar Comentario, Título, Autor, Categoría, Ver Lista Libros_|
 | Referencias | _C.U.1, C.U.3, C.U.4, C.U.5, C.U.10, C.U.11, C.U.12, C.U.6_ |   
 |  Notas |  |
-| Autor  | _Nabil León (@nalleon)_ |
+| Autor  | _Nabil L. A. (@nalleon)_ |
 |Fecha | _20/12/2023_ |
 
 |  Atributo |||
@@ -45,7 +58,7 @@ El sistema debe tener una interfaz de usuario simple (Main con menú) y proporci
 | Relaciones | _Prestar Libro, Devolver Libro, Registrar Usuario, Agregar Libro, Gestionar reserva Libro, Visualizar Información, Modificar Información_  |
 | Referencias | _C.U.2, C.U.3, C.U.7, C.U.8, C.U.9, C.U.13, C.U.14_ |   
 |  Notas |  |
-| Autor  | _Nabil León (@nalleon)_ |
+| Autor  | _Nabil L. A. (@nalleon)_ |
 |Fecha | _20/12/2023_ |
 
 |  Atributo |||
@@ -69,7 +82,7 @@ El sistema debe tener una interfaz de usuario simple (Main con menú) y proporci
   | Post-condiciones  |   |  
   |  Requerimientos |  |
   |  Notas |   |
-| Autor  | _Nabil León (@nalleon)_ |
+| Autor  | _Nabil L. A. (@nalleon)_ |
 |Fecha | _20/12/2023_ |
 
 
@@ -83,7 +96,7 @@ El sistema debe tener una interfaz de usuario simple (Main con menú) y proporci
   | Post-condiciones  |   |  
   |  Requerimientos |  |
   |  Notas |   |
-| Autor  | _Nabil León (@nalleon)_ |
+| Autor  | _Nabil L. A. (@nalleon)_ |
 |Fecha | _20/12/2023_ |
 
 
@@ -97,7 +110,7 @@ El sistema debe tener una interfaz de usuario simple (Main con menú) y proporci
   | Post-condiciones  |   |  
   |  Requerimientos |  |
   |  Notas |   |
-| Autor  | _Nabil León (@nalleon)_ |
+| Autor  | _Nabil L. A. (@nalleon)_ |
 |Fecha | _20/12/2023_ |
 
 
@@ -111,7 +124,7 @@ El sistema debe tener una interfaz de usuario simple (Main con menú) y proporci
   | Post-condiciones  |   |  
   |  Requerimientos | _C.U.1, C.U.10, C.U.11, C.U.12, C.U.6_  |
   |  Notas |   |
-| Autor  | _Nabil León (@nalleon)_ |
+| Autor  | _Nabil L. A. (@nalleon)_ |
 |Fecha | _20/12/2023_ |
 
   |  Caso de Uso	CU | C.U.5: Dejar Comentarios  |
@@ -124,7 +137,7 @@ El sistema debe tener una interfaz de usuario simple (Main con menú) y proporci
   | Post-condiciones  |   |  
   |  Requerimientos |  |
   |  Notas |   |
-| Autor  | _Nabil León (@nalleon)_ |
+| Autor  | _Nabil L. A. (@nalleon)_ |
 |Fecha | _20/12/2023_ |
 
   |  Caso de Uso	CU | C.U.6: Ver Lista Libros |
@@ -137,7 +150,7 @@ El sistema debe tener una interfaz de usuario simple (Main con menú) y proporci
   | Post-condiciones  |   |  
   |  Requerimientos | _C.U.1, C.U.12_  |
   |  Notas |   |
-| Autor  | _Nabil León (@nalleon)_ |
+| Autor  | _Nabil L. A. (@nalleon)_ |
 |Fecha | _20/12/2023_ |
 
   |  Caso de Uso	CU | C.U.7: Registrar Usuario |
@@ -150,7 +163,7 @@ El sistema debe tener una interfaz de usuario simple (Main con menú) y proporci
   | Post-condiciones  |   |  
   |  Requerimientos |  |
   |  Notas |   |
-| Autor  | _Nabil León (@nalleon)_ |
+| Autor  | _Nabil L. A. (@nalleon)_ |
 |Fecha | _20/12/2023_ |
 
   |  Caso de Uso	CU | C.U.8: Agregar Libro |
@@ -163,7 +176,7 @@ El sistema debe tener una interfaz de usuario simple (Main con menú) y proporci
   | Post-condiciones  |   |  
   |  Requerimientos |  |
   |  Notas |   |
-| Autor  | _Nabil León (@nalleon)_ |
+| Autor  | _Nabil L. A. (@nalleon)_ |
 |Fecha | _20/12/2023_ |
 
   |  Caso de Uso	CU | C.U.9: Gestionar reserva Libro |
@@ -176,7 +189,7 @@ El sistema debe tener una interfaz de usuario simple (Main con menú) y proporci
   | Post-condiciones  |   |  
   |  Requerimientos |  |
   |  Notas |   |
-| Autor  | _Nabil León (@nalleon)_ |
+| Autor  | _Nabil L. A. (@nalleon)_ |
 |Fecha | _20/12/2023_ |
 
   |  Caso de Uso	CU | C.U.10: Buscar por Título |
@@ -189,7 +202,7 @@ El sistema debe tener una interfaz de usuario simple (Main con menú) y proporci
   | Post-condiciones  |   |  
   |  Requerimientos | _C.U.1_ |
   |  Notas |   |
-| Autor  | _Nabil León (@nalleon)_ |
+| Autor  | _Nabil L. A. (@nalleon)_ |
 |Fecha | _20/12/2023_ |
 
   |  Caso de Uso	CU | C.U.11: Buscar por Autor |
@@ -202,7 +215,7 @@ El sistema debe tener una interfaz de usuario simple (Main con menú) y proporci
   | Post-condiciones  |   |  
   |  Requerimientos | _C.U.1_ |
   |  Notas |   |
-| Autor  | _Nabil León (@nalleon)_ |
+| Autor  | _Nabil L. A. (@nalleon)_ |
 |Fecha | _20/12/2023_ |
 
   |  Caso de Uso	CU | C.U.12: Buscar por Categoría |
@@ -215,7 +228,7 @@ El sistema debe tener una interfaz de usuario simple (Main con menú) y proporci
   | Post-condiciones  |   |  
   |  Requerimientos | _C.U.1_ |
   |  Notas |   |
-| Autor  | _Nabil León (@nalleon)_ |
+| Autor  | _Nabil L. A. (@nalleon)_ |
 |Fecha | _20/12/2023_ |
 
   |  Caso de Uso	CU | C.U.13: Visualizar Información|
@@ -228,7 +241,7 @@ El sistema debe tener una interfaz de usuario simple (Main con menú) y proporci
   | Post-condiciones  |   |  
   |  Requerimientos | _C.U.9_ |
   |  Notas |   |
-| Autor  | _Nabil León (@nalleon)_ |
+| Autor  | _Nabil L. A. (@nalleon)_ |
 |Fecha | _20/12/2023_ |
 
   |  Caso de Uso	CU | C.U.14: Modificar Información|
@@ -241,7 +254,7 @@ El sistema debe tener una interfaz de usuario simple (Main con menú) y proporci
   | Post-condiciones  |   |  
   |  Requerimientos | _C.U.9, C.U13_ |
   |  Notas |   |
-| Autor  | _Nabil León (@nalleon)_ |
+| Autor  | _Nabil L. A. (@nalleon)_ |
 |Fecha | _20/12/2023_ |
 
 
