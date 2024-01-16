@@ -80,5 +80,6 @@ Atributos: usuario que hizo el comentario, libro comentado, texto del comentario
 Métodos: agregarComentario(), eliminarComentario(), etc.
 ```
 
-
+## Diagrama de Clases
+<img src=../images/DiagramaClases.png>
 </div>
