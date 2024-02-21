@@ -48,7 +48,8 @@ public class LibroTest {
 
     @Test
     public void equalsTest(){
-
+        Libro libro2 = new Libro(isbn, titulo, autor, fPublicacion);
+        Assertions.assertTrue(libro.equals(libro2));
     }
 
 }
