@@ -5,6 +5,8 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.util.Objects;
+
 public class LibroTest {
     private String isbn= "isbn";
     private String titulo = "nombre";
@@ -47,9 +49,19 @@ public class LibroTest {
     }
 
     @Test
-    public void equalsTest(){
-        Libro libro2 = new Libro(isbn, titulo, autor, fPublicacion);
-        Assertions.assertTrue(libro.equals(libro2));
+    public void equalsTest() {
+        Libro libroNulo = null;
+        String libroOtraClase = "";
+        Libro libroEquals = new Libro(isbn);
+        Assertions.assertEquals(libro, libroEquals, "No son iguales");
+        Assertions.assertEquals(libro, libro);
+        Assertions.assertNotEquals(libro, libroNulo);
+        Assertions.assertNotEquals(libro, libroOtraClase, "No es la misma clase");
+    }
+
+    @Test
+    public void hashCodeTest () {
+        Assertions.assertEquals(libro.hashCode(), Objects.hash(isbn), "No se ha obtenido el resultado esperado");
     }
 
 }

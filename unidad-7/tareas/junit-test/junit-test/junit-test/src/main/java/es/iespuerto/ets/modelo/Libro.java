@@ -9,6 +9,8 @@ public class Libro {
     private String fPublicacion;
 
     public  Libro (){}
+    public Libro(String isbn) {
+    }
 
     public Libro(String isbn, String titulo, String autor, String fPublicacion) {
         this.isbn = isbn;
@@ -16,6 +18,7 @@ public class Libro {
         this.autor = autor;
         this.fPublicacion = fPublicacion;
     }
+
 
     /**
      * Getters y setters
