@@ -53,15 +53,15 @@ public class LibroTest {
         Libro libroNulo = null;
         String libroOtraClase = "";
         Libro libroEquals = new Libro(isbn);
-        Assertions.assertEquals(libro, libroEquals, "No son iguales");
-        Assertions.assertEquals(libro, libro);
-        Assertions.assertNotEquals(libro, libroNulo);
-        Assertions.assertNotEquals(libro, libroOtraClase, "No es la misma clase");
+        Assertions.assertTrue(libro.equals(libroEquals), "No son iguales");
+        Assertions.assertFalse(libro.equals(libroNulo), "No son iguales");
+        Assertions.assertFalse(libro.equals(libroOtraClase), "No es la misma clase");
     }
 
     @Test
     public void hashCodeTest () {
         Assertions.assertEquals(libro.hashCode(), Objects.hash(isbn), "No se ha obtenido el resultado esperado");
     }
+
 
 }
