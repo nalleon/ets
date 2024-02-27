@@ -11,21 +11,36 @@ public class BibliotecaNegocioTest {
     private int id = 1;
     private String nombre = "nombre";
     private String direccion = "direccion";
-    private String isbn= "isbn";
-    private String titulo = "nombre";
-
-    private String autor = "autor";
-    private String fPublicacion="20/02/2024";
 
     BibliotecaNegocio bibliotecaNegocio;
     Libro libro;
     @BeforeEach
     public void beforeEach() {
-        bibliotecaNegocio = new BibliotecaNegocio(id,nombre,direccion);
-        libro = new Libro(isbn, titulo, autor, fPublicacion);
-
+        bibliotecaNegocio = new BibliotecaNegocio(id);
+        bibliotecaNegocio = new BibliotecaNegocio(id, nombre, direccion);
+        libro = new Libro(String.valueOf(id), "titulo", "autor", "fPublicacion");
+        bibliotecaNegocio.addLibro(libro);
     }
 
+    @Test
+    public void addLibroDuplicadoTest () {
+        bibliotecaNegocio.addLibro(libro);
+        Assertions.assertEquals(1, bibliotecaNegocio.obtenerLibros().size(),
+                "No se ha obtenido el numero esperado");
+    }
+
+    @Test
+    public void existeLibroTest () {
+        Assertions.assertTrue(bibliotecaNegocio.existeLibro(libro), "Resultado no esperado");
+    }
+
+    @Test
+    public void obtenerLibroTest () {
+        Libro libroBuscar = new Libro(String.valueOf(id));
+
+        Assertions.assertEquals(libroBuscar, bibliotecaNegocio.obtenerLibro(libroBuscar),
+                "Resultado no esperado");
+    }
 
     @Test
     public void actualizarlibroBuscarTest(){
@@ -40,7 +55,11 @@ public class BibliotecaNegocioTest {
 
         bibliotecaNegocio.actualizarLibro(libroBuscar);
     }
-
+    @Test
+    public void obtenerLibroNoExisteTest () {
+        Libro libroBuscar = new Libro(String.valueOf(2));
+        Assertions.assertNull(bibliotecaNegocio.obtenerLibro(libroBuscar), "Resultado no esperado");
+    }
     @Test
     public void actualizarLibroNoExisteTest(){
         Libro libroNoExiste= new Libro(String.valueOf(2));
@@ -48,7 +67,19 @@ public class BibliotecaNegocioTest {
     }
     @Test
     public void actualizarLibroExisteTest(){
-        Libro libroNoExiste= new Libro(String.valueOf(1));
-        Assertions.assertTrue(bibliotecaNegocio.actualizarLibro(libroNoExiste), "Resultado no esperado");
+        Libro libroExiste= new Libro(String.valueOf(1));
+        Assertions.assertTrue(bibliotecaNegocio.actualizarLibro(libroExiste), "Resultado no esperado");
+    }
+
+    @Test
+    public void eliminarLibroTest(){
+        Libro libroExiste= new Libro(String.valueOf(1));
+        Assertions.assertTrue(bibliotecaNegocio.eliminarLibro(libroExiste), "Resultado no esperado");
+    }
+
+    @Test
+    public void eliminarLibroNoExisteTest(){
+        Libro libroNoExiste= new Libro(String.valueOf(3));
+        Assertions.assertTrue(bibliotecaNegocio.eliminarLibro(libroNoExiste), "Resultado no esperado");
     }
 }

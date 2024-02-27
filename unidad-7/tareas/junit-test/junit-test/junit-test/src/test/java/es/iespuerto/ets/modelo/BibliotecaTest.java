@@ -50,7 +50,6 @@ public class BibliotecaTest {
         Biblioteca bibliotecaNull = null;
         String bibliotecaOtraClase = "";
         Biblioteca bibliotecaEquals = new Biblioteca(id);
-
         Assertions.assertTrue(biblioteca.equals(bibliotecaEquals), "No son iguales");
         Assertions.assertFalse(biblioteca.equals(bibliotecaNull), "No son iguales");
         Assertions.assertFalse(biblioteca.equals(bibliotecaOtraClase), "No es la misma clase");
