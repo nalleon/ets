@@ -54,7 +54,7 @@ public class LibroTest {
         String libroOtraClase = "";
         Libro libroEquals = new Libro(isbn);
         Assertions.assertEquals(libro, libroEquals, "No son iguales");
-        Assertions.assertEquals(libro, libro);
+        Assertions.assertEquals(libro, libroEquals);
         Assertions.assertNotEquals(libro, libroNulo);
         Assertions.assertNotEquals(libro, libroOtraClase, "No es la misma clase");
     }

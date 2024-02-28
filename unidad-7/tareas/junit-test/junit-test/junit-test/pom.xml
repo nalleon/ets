@@ -4,11 +4,17 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>es.iespuerto.ets</groupId>
-    <artifactId>junit-test</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <groupId>es.ies.puerto</groupId>
+    <artifactId>biblioteca</artifactId>
+    <version>1.0</version>
 
-    <name>Proyectos de junit-test</name>
+    <name>${project.artifactId}</name>
+    <description>Proyecto de biblioteca para los modulos de PRO y ETS </description>
+    <developers>
+        <developer>
+            <name>Nabil Leon Alvarez</name>
+        </developer>
+    </developers>
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
